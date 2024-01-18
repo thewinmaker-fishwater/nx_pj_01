@@ -1,0 +1,38 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
+    "@sidebase/nuxt-session": "^0.2.8",
+    "nuxt": "^3.9.0",
+    "vue": "^3.4.5",
+    "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@nuxt/ui": "^2.11.1",
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/proxy": "^2.1.0",
+    "@pinia/nuxt": "^0.5.1",
+    "animate.css": "^4.1.1",
+    "axios": "^1.6.5",
+    "bootstrap-vue": "^2.23.1",
+    "cookie-universal-nuxt": "^2.2.2",
+    "dotenv": "^16.3.1",
+    "jquery": "^3.7.1",
+    "pinia": "^2.1.7",
+    "sass": "^1.69.7",
+    "vue-session": "^1.0.0",
+    "vuex-persistedstate": "^4.1.0"
+  },
+  "overrides": {
+    "vue": "latest"
+  }
+}
