@@ -46,26 +46,6 @@
         //         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
         //     ]
         // },
-        router: {
-            routes: [
-                {
-                    name: 'index',
-                    path: '/',
-                    component: 'pages/index.vue'
-                    // component: '@/pages/main.vue'
-                },
-                {
-                    name: 'user',
-                    path: '/user',
-                    component: 'pages/user/index.vue'
-                },
-                {
-                    name: 'user-one',
-                    path: '/user/one',
-                    component: 'pages/user/one.vue'
-                }
-            ]
-        },
         // router: {
         //     routes: [
         //         {

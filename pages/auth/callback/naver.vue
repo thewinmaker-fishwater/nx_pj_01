@@ -28,4 +28,3 @@ mounted() {
 }
 }
 </script>
-[출처] Nuxt[Vue] 카카오,네이버 OAuth 로그인 구현하기 (#스터디)|작성자 GG

@@ -42,10 +42,10 @@ console.log('header')
 export default {
     name:'',
     components:{},
-    data(){
+    setup() {
         return {
             store: userStore(),
-        };
+        }
     },
     beforeCreate(){},
     create(){},

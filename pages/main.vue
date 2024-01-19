@@ -41,10 +41,6 @@
                         <p class="text-base leading-relaxed">{{ user4 }}</p>
                         <p class="text-base leading-relaxed">{{ msg4 }}</p>
                     </div>
-                    <div class="pb-10 mb-10 border-b border-gray-800 md:pr-12 md:py-8 md:border-b-0 md:mb-0">
-                        <h1 class="mb-2 text-2xl font-medium text-white sm:text-3xl title-font">Store Data</h1>
-                        <p class="text-base leading-relaxed">Counter: {{ store.count }}</p>
-                    </div>
                 
                 
                     <!-- <div class="pb-10 mb-10 border-b border-gray-800 md:w-1/2 md:pr-12 md:py-8 md:border-r md:border-b-0 md:mb-0">
@@ -97,7 +93,6 @@
 import axios from 'axios';
 import { userStore } from '@/stores/user'
 
-// const nuser = useCookie<{id: '', age: 0, email : '', gender: '', nickname: '', profile_image: '' }>('nuser');
 const nuser = useCookie('nuser');
 const logins = useCookie('logins');
 
@@ -113,22 +108,6 @@ const fnlogout = () => {
 };
 
 
-// const counter = useCookie('counter')
-// counter.value = counter.value || Math.round(Math.random() * 1000)
-
-// console.log("counter : " + counter.value);
-
-// const {status, signIn, signOut} = useSession();
-// const loggedIn = computed(
-//     () => status.value === 'authenticated'
-// )
-// async function handleSignIn(){
-//     await signIn()
-// }
-
-// async function handleSignOut(){
-//     await signOut()
-// }
 
 
 let nnInfo = {};
@@ -267,6 +246,7 @@ export default {
                 // const nInfo = document.getElementById("nInfo");
                 // nInfo.innerHTML = JSON.stringify(naverLogin.user);
 
+
                 // const br = document.createElement('br');
                 // nInfo.append(br,"email : ",naverLogin.user.email);
 
@@ -276,9 +256,7 @@ export default {
                 $("#nInfo").append(html);
 
                 logins.value = (logins.value || 0) + 1;
-                // nuser.value = {id: '12312', age: 10, email : '', gender: '', nickname: '', profile_image: '' };
                 nuser.value = info;
-                // console.log(nuser.value);
                 
                     // gender: naverLogin.user.gender,
                     // nickname: naverLogin.user.nickname,

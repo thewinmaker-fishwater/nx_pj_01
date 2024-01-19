@@ -7,7 +7,7 @@ import $ from 'jquery';
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: false },
-  ssr: true,
+  ssr: false,
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -46,7 +46,6 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxt/ui',
-    '@sidebase/nuxt-session',
     ["@pinia/nuxt", { autoImports: ["defineStore"] }],
   ],
   imports: {
