@@ -15,13 +15,13 @@
                     <div class="w-1/2 p-1 md:p-2">
                     <img alt="gallery" class="block object-cover object-center w-full h-full" src="https://dummyimage.com/501x301">
                     </div>
-                    <div class="w-full p-1 md:p-2">
-                    <img alt="gallery" class="block object-cover object-center w-full h-full" src="https://dummyimage.com/600x360">
+                    <div id="chart02" class="w-full p-1 md:p-2">
+                    <!-- <img alt="gallery" class="block object-cover object-center w-full h-full" src="https://dummyimage.com/600x360"> -->
                     </div>
                 </div>
                 <div class="flex flex-wrap w-1/2">
-                    <div class="w-full p-1 md:p-2">
-                    <img alt="gallery" class="block object-cover object-center w-full h-full" src="https://dummyimage.com/601x361">
+                    <div id="chart01" class="w-full p-1 md:p-2">
+                    <!-- <img alt="gallery" class="block object-cover object-center w-full h-full" src="https://dummyimage.com/601x361"> -->
                     </div>
                     <div class="w-1/2 p-1 md:p-2">
                     <img alt="gallery" class="block object-cover object-center w-full h-full" src="https://dummyimage.com/502x302">
@@ -38,6 +38,8 @@
 </template>
 
 <script>
+
+
 export default {
     name:'',
     components:{},
@@ -49,7 +51,115 @@ export default {
     beforeCreate(){},
     create(){},
     beforeMount(){},
-    mounted(){},
+    mounted(){
+
+        //chart01
+        Highcharts.chart('chart01', {
+
+            title: {
+                text: '대장제목'
+            },
+
+            subtitle: {
+                text: '부제목'
+            },
+
+            yAxis: {
+                title: {
+                text: 'y축 제목'
+                }
+            },
+
+            xAxis: {
+                accessibility: {
+                rangeDescription: 'Range: 2010 to 2017'
+                }
+            },
+
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle'
+            },
+
+            plotOptions: {
+                series: {
+                label: {
+                    connectorAllowed: false
+                },
+                pointStart: 2010
+                }
+            },
+
+            series: [{
+                name: '선 1',
+                data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+            }, {
+                name: '선 2',
+                data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+            }, {
+                name: '선 3',
+                data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
+            }],
+
+            responsive: {
+                rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                    }
+                }
+                }]
+            }
+
+        });
+
+
+
+        //chart02
+        // var title = {text: '대장제목'};
+        // var subtitle = {text: '부제목'}; 
+        // var yAxis = {
+        //     title: {text: 'y축 제목'}
+        // };
+        // var xAxis = {
+        //     categories: ['일', '이', '삼', '사', '오', '육', '칠', '팔'],
+        //     crosshair: true
+        // };
+        // var legend = {
+        //     layout: 'vertical',
+        //     align: 'right',
+        //     verticalAlign: 'middle'
+        // };
+        // var series = [{
+        //     name: '선 1',
+        //     data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+        // },{
+        //     name: '선 2',
+        //     data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+        // },{
+        //     name: '선 3',
+        //     data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]		
+        // }];
+        
+        // var json_chart={};
+        
+        // json_chart.title=title;
+        // json_chart.subtitle=subtitle;
+        // json_chart.yAxis=yAxis;
+        // json_chart.xAxis=xAxis;
+        // json_chart.legend=legend;
+        // json_chart.series=series;
+        
+        // $('#chart02').highcharts(json_chart);
+        chart02();
+
+    },
     beforeUpdate(){},
     updated(){},
     beforeUnmount(){},

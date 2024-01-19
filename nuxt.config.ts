@@ -40,7 +40,8 @@ export default defineNuxtConfig({
           { src: '/kakao.min.js' },
           { src: '/naveridlogin_js_sdk_2.0.2.js' },
           { src: '/jquery-3.7.1.js' },
-
+          { src: '/highcharts.js'},
+          { src: '/chart.js'},
       ],
     },
   },
